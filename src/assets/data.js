@@ -11,7 +11,7 @@ let notes = [
     },
     {
         "id": 3,
-        "body": "Cours Ecole de Vie",
+        "body": "Voyage a Marseille",
         "updated": "2023-01-2302",
     },
 ]  

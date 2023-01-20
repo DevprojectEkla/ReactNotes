@@ -19,7 +19,17 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loader: "babel-loader",
         options: { presets: ["@babel/env"] }
+      },{
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
       },
+        {
+test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },],
+        },
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
@@ -47,7 +57,8 @@ module.exports = {
 
   },
     plugins: [
-    new HtmlWebpackPlugin({template:"./public/index.html"})
+    new HtmlWebpackPlugin({template:"./public/index.html", favicon:"public/favicon.ico"})
+
   ]
 };
 
